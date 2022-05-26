@@ -1,0 +1,56 @@
+GET http://localhost:4004/catalog/AssessmentRequests
+
+###
+POST http://localhost:4004/catalog/AssessmentRequests
+Content-Type: application/json
+
+{
+    "ID": null,
+    "supplieremail": "renuka.dimber@bristlecone.com"
+}
+
+###
+PUT http://localhost:4004/catalog/ResponseDetails(ProjectID=100)
+Content-Type: application/json
+
+{
+    "ProjectID": 100,
+    "name" : "ABC"
+}
+
+###
+GET http://localhost:4004/catalog/ResponseDetails
+
+###
+GET http://localhost:4004/catalog/ApproverGrading
+###
+POST http://localhost:4004/catalog/ApproverDetails
+Content-Type: application/json
+
+{
+    "ProjectID": 100,
+    "UserID" : "def"
+}
+
+#####
+GET http://localhost:4004/catalog/TestDepartmentMasterTable?$filter=(ParentDepartment eq '400' or ParentDepartment eq 'All') and DepartmentID eq '100'
+###
+PUT http://localhost:44039/catalog/TestDepartmentMasterTable(DepartmentID='1001')
+Content-Type: application/json
+
+{
+    "DepartmentID": "1001",
+    "Description": "Sales",
+    "ParentDepartment": "1000"
+}
+###
+
+GET http://localhost:4004/catalog/Testing
+###
+POST http://localhost:4004/catalog/Testing
+Content-Type: application/json
+
+{
+   "name": "abcde",
+    "date": "02-02-1998"
+}
